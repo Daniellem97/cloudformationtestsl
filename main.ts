@@ -17,10 +17,12 @@ class MyStack extends TerraformStack {
 const app = new App();
 const stack = new MyStack(app, 'my-stack');
 
-new S3Backend(stack, {
-  bucket: 'sltftestbucket',
-  key: 'terraform.tfstate',
-  region: 'us-west-2'
-});
+terraform {
+  backend "s3" {
+    bucket = "sltftestbucket"
+    key    = "terraform.tfstate"
+    region = "us-west-2"
+  }
+}
 
 app.synth();
