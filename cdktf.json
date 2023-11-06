@@ -1,0 +1,10 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node --prefer-ts-exts main.ts",
+  "terraformProviders": [
+    "aws@~> 2.0"
+  ],
+  "terraformModules": [],
+  "codeMakerOutput": "imports",
+  "output": "cdktf.out"
+}
